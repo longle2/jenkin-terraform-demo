@@ -18,7 +18,7 @@ pipeline {
     }
     stage('Plan Resources') {
       steps {
-        sh 'terraform plan'
+        sh 'TF_LOG=TRACE terraform plan'
       }
     }
     stage('Apply Resources') {
